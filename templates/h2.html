@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Price Prediction</title>
+</head>
+<body>
+    <h1>Flight Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="Arr_time">Date of Booking:</label>
+        <input type="datetime-local" id="Arr_time" name="Arr_time" required><br><br>
+        
+        <label for="Dep_Time">Date of Journey:</label>
+        <input type="datetime-local" id="Dep_Time" name="Dep_Time" required><br><br>
+        
+        <label for="Arrival_Time">Arrival Time:</label>
+        <input type="datetime-local" id="Arrival_Time" name="Arrival_Time" required><br><br>
+        
+        <label for="stops">Total Stops:</label>
+        <input type="number" id="stops" name="stops" required><br><br>
+        
+        <label for="class">Class:</label>
+        <select id="class" name="class" required>
+            <option value="Economy">Economy</option>
+            <option value="First">First</option>
+            <option value="PremiumEconomy">Premium Economy</option>
+        </select><br><br>
+        
+        <label for="airline">Airline:</label>
+        <select id="airline" name="airline" required>
+            <option value="AirAsia">AirAsia</option>
+            <option value="Vistara">Vistara</option>
+            <option value="AllianceAir">AllianceAir</option>
+            <option value="GO FIRST">GO FIRST</option>
+            <option value="Indigo">Indigo</option>
+            <option value="Spicejet">Spicejet</option>
+            <option value="AkasaAir">AkasaAir</option>
+            <option value="StarAir">StarAir</option>
+        </select><br><br>
+        
+        <label for="Source">Source:</label>
+        <select id="Source" name="Source" required>
+            <option value="Delhi">Delhi</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Banglore">Banglore</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+        </select><br><br>
+        
+        <label for="Destination">Destination:</label>
+        <select id="Destination" name="Destination" required>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Banglore">Banglore</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Mumbai">Mumbai</option>
+        </select><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>
