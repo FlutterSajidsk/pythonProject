@@ -3,7 +3,17 @@ import pickle
 import pandas as pd
 import numpy as np
 
-model = pickle.load(open('flight.pkl', 'rb'))
+# Get the absolute path of the directory containing this script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(script_dir, 'flight.pkl')
+
+# Load the model
+try:
+    with open(model_path, 'rb') as model_file:
+        model = pickle.load(model_file)
+except Exception as e:
+    st.error(f"Error loading the model: {e}")
+    st.stop()
 
 st.title('Flight Price Prediction')
 
