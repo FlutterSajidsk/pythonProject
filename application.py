@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 # Get the absolute path of the directory containing this script
-model_path = flight.pkl
+model_path = https://github.com/FlutterSajidsk/pythonProject/blob/main/flight.pkl
 
 # Load the model
 try:
