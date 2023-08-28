@@ -4,8 +4,7 @@ import pandas as pd
 import numpy as np
 
 # Get the absolute path of the directory containing this script
-script_dir = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(script_dir, 'flight.pkl')
+model_path = flight.pkl
 
 # Load the model
 try:
